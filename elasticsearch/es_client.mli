@@ -101,6 +101,8 @@ sig
 
   val delete_index : string -> unit computation
 
+  val refresh_index : string -> unit computation
+
   val put_mapping :
     index: string -> Es_mapping.doc_mapping ->
     unit computation
