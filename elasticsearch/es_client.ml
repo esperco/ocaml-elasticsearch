@@ -307,7 +307,7 @@ struct
 
   let refresh_index index =
     let uri = make_index_uri ~indexes: [index] "_refresh" in
-    Http_client.post uri >>= opt_resp ->
+    Http_client.post uri >>= fun opt_resp ->
     handle_generic_result opt_resp
 
   let get_item ~index ~mapping id =
